@@ -1,13 +1,13 @@
 {% set name = "sos-papermill" %}
-{% set version = "0.1.6" %}
+{% set version = "0.2.0" %}
 
 package:
-  name: "{{ name|lower }}"
-  version: "{{ version }}"
+  name: {{ name|lower }}
+  version: {{ version }}
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 90e328af7d8640b5f903bd07318276a1d31a66d41ee95bdad92a077e5f7ae18c
+  sha256: 65465e660a015d53be6d49b25ca747b94859c6d5f0715c18a1fde05d8d23d4f4
 
 build:
   noarch: python
@@ -38,7 +38,7 @@ about:
   license: BSD-3-Clause
   license_family: BSD
   license_file: LICENSE
-  summary: "SoS engine for papermill"
+  summary: SoS engine for papermill
   doc_url: https://vatlab.github.io/sos-docs/
   dev_url: https://github.com/vatlab/sos-papermill
 
