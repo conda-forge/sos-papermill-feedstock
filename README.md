@@ -5,7 +5,7 @@ Home: https://github.com/vatlab/sos-papermill
 
 Package license: BSD-3-Clause
 
-Feedstock license: BSD 3-Clause
+Feedstock license: BSD-3-Clause
 
 Summary: SoS engine for papermill
 
