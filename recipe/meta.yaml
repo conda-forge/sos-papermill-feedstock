@@ -6,22 +6,22 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 010fb490efb7b89eaf06eff9ae8e7424d2c4d22e627adc867becabb736fe9937
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script:
     - {{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv
 
 requirements:
   host:
     - pip
-    - python >=3.6
+    - python {{ python_min }}
   run:
     - sos-notebook
-    - python >=3.6
+    - python >={{ python_min }}
     - papermill
 
 test:
@@ -30,6 +30,7 @@ test:
     - pytest
     - nbformat
     - mock
+    - python {{ python_min }}
   imports:
     - sos_papermill
 
